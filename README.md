@@ -1,4 +1,4 @@
-# Neural Fields with Keras-Core
+# Neural Fields with Keras-Core (In Progress)
 [![codecov](https://codecov.io/gh/jejjohnson/fieldx/branch/main/graph/badge.svg?token=YGPQQEAK91)](https://codecov.io/gh/jejjohnson/fieldx)
 
 > This package implements some minimal functionality to train neural fields using keras-core library.
