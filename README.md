@@ -1,5 +1,7 @@
 # Neural Fields with Keras-Core (In Progress)
-[![codecov](https://codecov.io/gh/jejjohnson/fieldx/branch/main/graph/badge.svg?token=YGPQQEAK91)](https://codecov.io/gh/jejjohnson/fieldx)
+
+[![CodeFactor](https://www.codefactor.io/repository/github/jejjohnson/knerf/badge)](https://www.codefactor.io/repository/github/jejjohnson/knerf)
+[![codecov](https://codecov.io/gh/jejjohnson/knerf/branch/main/graph/badge.svg?token=YGPQQEAK91)](https://codecov.io/gh/jejjohnson/knerf)
 
 > This package implements some minimal functionality to train neural fields using keras-core library.
 > It will also feature some extra functionality when working with spatiotemporal datasets.
