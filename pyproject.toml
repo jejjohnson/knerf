@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "knerf"
+version = "0.0.1"
+description = "Neural Fields with keras."
+authors = [
+    "Juan Emmanuel Johnson <jemanjohnson34@gmail.com>",
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/jejjohnson/knerf"
+keywords = ["nerf", "neural fields", "keras", "keras-core"]
+classifiers = [
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: MACOS/Linux",
+    "Natural Language :: English",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Development Status :: 2 - Pre-Alpha copy",
+
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+keras-core = "^0.1.7"
+numpy = "^1.25"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
