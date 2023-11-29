@@ -1,4 +1,4 @@
-import keras_core as keras
+import keras
 
 
 class SineInitializers(keras.initializers.Initializer):
@@ -18,7 +18,11 @@ class SineInitializers(keras.initializers.Initializer):
         return keras.random.uniform(shape, -limit, limit)
 
     def get_config(self):
-        return {"c": self.c, "omega": self.omega, "layer_type": self.layer_type}
+        return {
+            "c": self.c,
+            "omega": self.omega,
+            "layer_type": self.layer_type,
+        }
 
 
 class SirenLayer(keras.layers.Layer):
@@ -33,17 +37,18 @@ class SirenLayer(keras.layers.Layer):
     def build(self, input_shape):
         self.w = self.add_weight(
             shape=(input_shape[-1], self.units),
-            initializer=SineInitializers(c=self.c, omega=self.omega, layer_type=self.layer_type),
+            initializer=SineInitializers(
+                c=self.c, omega=self.omega, layer_type=self.layer_type
+            ),
             trainable=True,
         )
         limits = keras.ops.sqrt(1.0 / input_shape[-1])
         self.b = self.add_weight(
             shape=(self.units,),
             initializer=keras.initializers.RandomUniform(
-                minval=-limits,
-                maxval=limits
+                minval=-limits, maxval=limits
             ),
-            trainable=True
+            trainable=True,
         )
 
     def call(self, inputs):
@@ -53,4 +58,9 @@ class SirenLayer(keras.layers.Layer):
         return outputs
 
     def get_config(self):
-        return {"c": self.c, "omega": self.omega, "layer_type": self.layer_type, "units": self.units}
+        return {
+            "c": self.c,
+            "omega": self.omega,
+            "layer_type": self.layer_type,
+            "units": self.units,
+        }

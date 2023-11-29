@@ -8,7 +8,7 @@ ROOT = ./
 PIP = pip
 CONDA = conda
 SHELL = bash
-PKGROOT = finitevolx
+PKGROOT = knerf
 
 
 help:	## Display this help
